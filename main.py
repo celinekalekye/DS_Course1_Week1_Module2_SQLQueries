@@ -56,7 +56,7 @@ df_hungry
 
 # CodeGrade step7
 # Replace None with your code
-df_hungry_ages = pd.read_sql("""SELECT name, age, hungry FROM dogs WHERE hungry = 1 AND age >= 2 AND age <= 7 AND name IS NOT NULL
+df_hungry_ages = pd.read_sql("""SELECT name, age, hungry FROM dogs WHERE hungry = 1 AND age >= 2 AND age <= 7 
                         ORDER BY name ASC; """, conn2)
 df_hungry_ages
 
