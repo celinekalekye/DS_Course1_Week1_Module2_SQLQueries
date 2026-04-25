@@ -29,7 +29,7 @@ df_mass
 
 # CodeGrade step4
 # Replace None with your code
-df_mass_moon = pd.read_sql("""SELECT * FROM planets WHERE num_of_moons >= 1 AND mass <= 1.00; """, conn1)
+df_mass_moon = pd.read_sql("""SELECT * FROM planets WHERE num_of_moons >= 1 AND mass < 1.00; """, conn1)
 df_mass_moon
 
 # CodeGrade step5
@@ -101,7 +101,7 @@ df_teams_years
 
 # CodeGrade step12
 # Replace None with your code
-df_at_bats = pd.read_sql("""SELECT team, AVG(at_bats) AS 'average_at_bats' FROM babe_ruth_stats GROUP BY team""", conn3)
+df_at_bats = pd.read_sql("""SELECT team, AVG(at_bats) AS 'average_at_bats' FROM babe_ruth_stats GROUP BY team HAVING AVG(at_bats) > 200""", conn3)
 df_at_bats
 
 # Run this cell without changes
